@@ -1,0 +1,87 @@
+Node:
+        - implementation of js that runs outside of the browser
+    - What is node used for?
+        - creating Web servers and writing server side logic for a full stack application
+        - command line tolls
+        - Native Apps 
+        - Video Games
+        - Drone Software
+        - more and more
+
+    - Node runs JS but not include the browser stuff, the eindow, document, DOM, APIs
+    - The global scope in node is NOT window, in fact it is "global" (it is the top level bubble)
+usefull comands
+.help   for new information
+
+*****************
+RUNNING NODE FILES
+*****************
+We usually run our node code in js files
+
+to execute the js file we, at the terminal, type: node fileName.js
+    - to do so, you need to be in the correct directory, or to reference the correct path to it.
+
+
+********
+PROCESS
+********
+Process is an object that's available (it is the global scope) that includes things like the version of node,
+    - it has methods that allow you to get input and write to the standard output, basically right to your console.
+    - memory usage 
+    - info about the current directory, that the user is running the script in.
+    - more and more
+    ex:
+        process.version
+        process.release
+        process.cwd() // current directory info
+        process.argv // returns a array containing the executable path of node and them the path to the file that you are currently running, then arguments that can be passed in by the command line. (so I can pass arguments to a SCRIPT, not to a function, but to a SCRIPT)
+            - JS file that we are working needs to has process.argv, so the arguments passed via command line in the terminal will be added to the array created by the argv method.
+            -ex:
+                1. I create the file greeter.js
+                2. in the terminal I type:
+                    code greeter.js harry ronny gregory 
+                3. in the greeter.js I type the following command line:
+                    const args = process.argv.slice(2) // slice will remove the first two elements that process.argv always return, the path thing 
+                    for (let arg of args){
+                        console.log(`Hi there ${arg}` )
+                    }
+                4. Execute the greet.js script file in the terminal and add the names to be greeted:
+                    node. greet.js harry ronny gregory   // this names will be passed to the argv array
+                 it will execute the code. "hi there" for each name we added in the console. We passes some arguments by the terminal command line
+
+********************
+IMPORT A FILE/SCRIPT
+*********************
+
+const variableName = require("./fileName"); //in the exported file I need to explicitly say what I want to export out. 
+
+in the exported file: i need to add the object module
+    module.export.add = func // func or var or object 
+
+I can exports entire directory by creatin a index.js and exports all the object and marge then into a array
+
+
+**************************
+NPM - NODE PACKAGE MANAGER
+**************************
+https://www.npmjs.com/
+
+to intall packages and libraries:
+    - npm install name
+    - instalations are usually made locally, to instal it globally you need to add the flag "-g" e.g:
+        - "npm install -g name" OR "npm i -g name"  
+
+ THE PACKAGE.JASON
+    - In every node module that I did not install mannualy will have a package.jason file, that are put in every node app. Contains metadata for the particular project or package  or application 
+    - to create a package.jason that are in the correct way for us to use, the easier way is to created via npm, in the folder of our project using the following command:
+        - npm init.
+            It going to ask me:
+                -package name;
+                - version;
+                - description; 
+                - entry point;
+                - etc.
+                - author
+                - license
+    -We typically put this in the root directory of a project, most importantly, this file contains a list of dependencies, and this is nice for us, but specially nice for other people if they ever going to be working
+    in this project, that can be download all at once. you do it by typing in the root directoty (of the project) just "npm install" 

@@ -1,0 +1,18 @@
+********
+EXPRESS
+********
+Express is a node package that does a lot for us. It is a web dev framework
+It help us to:
+    - Start up a server to listen for requests
+    - Parde incoming requests
+    - Match those requests to particular routes 
+    - Craft our http response and associated content 
+
+Library vs framework:
+    - Library: When you use a library, you are in charge!, You control the flow, of the application code, and you decide when to use the library.
+    - framework: with frameworks, that control is inverted. The framework is in charge, and you are maraly a participant. The frame work tells you where to plug in  the code.
+        - You are writing your code according to how the framework works and you're following the rules.
+
+
+nodemon is a package that autonatically reset the server when changes are made. 
+https://github.com/remy/nodemon
