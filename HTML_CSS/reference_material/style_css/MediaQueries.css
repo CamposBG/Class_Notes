@@ -1,0 +1,104 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+nav {
+    font-size: 1.5em;
+
+}
+
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+/* the width is the width of your viewport:
+A viewport represents the area in computer graphics being currently viewed. In web browser terms,
+ it is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part 
+ of the document you are viewing.
+ */
+
+
+ /* it says that at minimum of 600 to 800px and upwards */
+/* @media (min-width: 600px) and (max-width:800px){
+    h1{
+        color:purple
+    }
+} */
+
+/* the most comom is: */
+h1 {
+    color: red;
+}
+@media (min-width:500px){
+    h1{
+        color: orange;
+    }
+}
+
+@media (min-width:1000px){
+    h1{
+        color: yellow;
+    }
+}
+@media (min-width:1500px){
+    h1{
+        color: green;
+    }
+}
+@media (min-width:2000px){
+    h1{
+        color: blue;
+    }
+}
+
+/* @media (orientation: landscape){
+    body {
+        background-color: cadetblue;
+    }
+} */
+
+/* 1st lets remove the breack that occurs in the h1 at <650px */
+@media (max-width:750px){
+    h1{
+        font-size:4em ;
+    }
+}
+@media (max-width:575px){
+    h1{
+        font-size:3em ;
+    }
+}
+
+/* Now lets make the navbar, home button in the left  Sigup at the roght, the others centered
+ */
+ nav{
+     display: flex;
+     justify-content: space-between;
+ }
+ ul {
+     flex: 1;
+     max-width: 50%;
+     /* border: 1px solid red; */
+     display: flex;
+     justify-content:space-evenly;
+     
+     
+     
+ }
+ ul,li{
+    /* border: 1px solid red; */
+
+ }
+ /* now lets stack the links in a collun in certem point */
+
+ @media (max-width:750px){
+    nav, nav ul{
+        flex-direction: column;
+        align-items: center;
+    }

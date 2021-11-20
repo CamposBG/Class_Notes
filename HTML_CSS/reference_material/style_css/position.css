@@ -1,0 +1,40 @@
+section div {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    border: 1px black solid;
+    margin: 10px;
+    display: inline-block;
+}
+/* Position STATIC is de default */
+#middle {
+    background-color: brown;
+}
+
+#static #middle{
+    position: static;
+    /* as static it does not move */
+    top: 100px;
+
+}
+/* RELATIVE - object is positioned relative to where it normaly wold be */
+#relative #middle{
+    position: relative;
+    top: 50px;
+    left: 50px ;
+}
+/* absolute    The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.
+    This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins. */
+#absolute {
+    position: relative;
+}
+#absolute #middle{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+/* FIXED= it is like the absolute, except it has nothing to do with any parent elements or anything like. */
+#fixed #middle{
+    position: fixed;
+    top: 0px;
+    left: 0px;

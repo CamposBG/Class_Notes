@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form  exemple</title>
+</head>
+<body>
+    <!-- Forms - the conteiner for your inputs, represents a document section containing interactive
+        controls for submitting information 
+        The action attribute specifies WHERE the form data should be sent
+        The method attribute specifies which HTTP method should be used-->
+    <h1>Forms demo</h1>
+
+    <form action="/location">
+    <!-- input element is used to create a variety of different form crontrols,
+    we have 20+ possibli types od inputs, ranging from date piker to checkbox
+    the type attribute is where the magic happens. Changing type dramatically alters the input's behavior and appearance -->
+   
+    <!-- Placeholder is another atribute from forms that  specify the placeholder text for an input.
+    the text that shows before we've typed anything while it's empty -->
+    <form action="/location">
+        <input type="text"placeholder = "username">
+        <input type="password" placeholder=" password">
+        <input type="color">
+        <input type="number"placeholder= "enter a number">
+        <input type="time">
+    </form>
+    <!-- label a Form, we use 2 atributes, id and and for, that usually mach the an id. Just one element should have an id. -->
+    <h2>Form 2</h2>
+    <form action="/location">
+        <p>
+            <label for="username1">Enter a Username</label>
+            <input id ="username1" type="text"placeholder = "username"> 
+        </p>
+            <label for="Password">Add you Password</label>
+            <input id = "Password" type="password" placeholder=" password">
+        </p>
+        <p>
+            <label for="color">Enter a color</label>
+            <input id="color" type="color">
+        </p>
+        <p>
+            <label for="Age">Enter your age</label>
+            <input id="Age" type="number"placeholder= "enter a number">
+        </p>
+         <!--* BUTTONS - whatever text you put inside is used to label a button 
+             * if a button is outside of a form it does nothing, however I can use javascript to make ir do something
+             * inside a for the button do a action, the default behavior is to submit the form. But we have an option, we can pass in an attribute called type, just like the 
+               type attribute for input, but we have diferente options, diferent values-->
+        <button>SUBMIT</button>
+        <button type="button">type = "button" does not submit the form</button>
+    </form>
+        <!-- When we submit a form it send a HTTP request to the form action and it sends the data.
+        The name attribute inside the input are simple things that you server will look for, 
+        the name atribute will be ised when our data is sent,It will be labeled under this name   -->
+         <hr>
+         <form action="/Ex.location">
+            <p>
+            <label for="username2">Enter a Username</label>
+            <input id ="username2" type="text"placeholder = "username" name="user_name"> 
+            </p>
+            <label for="Password2">Add you Password</label>
+            <input id = "Password2" type="password" placeholder=" password" name="password">
+        </p>
+        <p>
+            <label for="color2">Enter a color</label>
+            <input id="color2" type="color" name="colour">
+        </p>
+        <p>
+            <label for="Age2">Enter your age</label>
+            <input id="Age2" type="number"placeholder= "enter a number" name="age">
+        </p>
+        <button>go</button>
+        <p>
+            <form action="etc">
+                <label for="checkbox1">I agree to everything</label>
+                <input id="checkbox1" type="checkbox" name="agree_tos">
+                <button>submit</button>
+            </form>
+        <!-- Radio button just one can be choosed, need to give the same name, we need to add attribute value -->
+        <form action="/search">
+            <p>
+                <label for="xs">XS</label>
+                <input type="radio" name="size" id="xs" value="xs" >
+                <label for="s">S</label>
+                <input type="radio" name="size" id="s"value="s">
+                <label for="m">M</label>
+                <input type="radio" name="size" id="m" value="m">
+            </p>
+            <button>submit</button>
+        <!-- select element represents a control thath procides a menu os options-->
+        <form action="/search">
+            <p>
+                <label for="meal">Please select a meal type</label>
+                <select name="meal" id="meal">
+                    <option value="fish" selected>Fish</option>
+                    <option value="pasta">pasta</option>
+                    <option value="bbq">BBQ</option>
+                </select>
+
+            </p>
+            <button>submit</button>
+        </form>
+
+        </p>
+        <hr>
+<!-- FORM VALIDATION
+required attribute make mandatory to be done
+attribute pattern specifies a regular expression for the form control's value should match. e.g. at least one upercase, one alphanumeric, etc -->
+        <h2>Form validation exemple</h2>
+            <form action="/dummy">
+                <label for="first">First name</label>
+                <input type="text" name="first" id="first" required>
+                <p>
+                    <label for="username">Username:</label>
+                    <!-- min and max are for numeric value minlenght and maxlenght are for characters -->
+                    <input type="text" id="username" name="username" minlength="5" maxlength="20" required> 
+                </p>
+                <button>Submit</button>
+            </form>
+        </body>
+    
+</html>

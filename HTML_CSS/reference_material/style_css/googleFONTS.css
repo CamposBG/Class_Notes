@@ -1,0 +1,23 @@
+/* https://fonts.google.com/ */
+body {
+    font-family: Montserrat, sans-serif;
+}
+main {
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* h1{
+    font-size:3rem ;
+}
+h2{
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+} */
+h1, h2, h3 {
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+}

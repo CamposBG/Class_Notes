@@ -1,0 +1,194 @@
+<!-- a flag to the browser indicating that we are using html5 -->
+<!DOCTYPE html>
+
+<!-- the root (top-level element) of an HTML document. All other elements must be descendants of this element.>
+just a head and body insdide -->
+<html>
+
+<!-- contaim metadata about the documents -->
+
+<head>
+    <!-- defines the document's title that is shown in a Browser's title bar or a page's tab -->
+    <title>Ecotoxicology</title>
+</head>
+<!-- represents the content of an HTML document. There can be only one body element in a document-->
+
+<body>
+    <main>
+        <!--HEADINGS - In most pages we just want to have one h1 heading
+        Headings are not used for theier size, instead for the level structure -->
+        <h1>Ecotoxicity</h1>
+
+
+        <!-- Anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address. -->
+        <a href="https://en.wikipedia.org/wiki/Ecotoxicology">link from the real <strong>Ecotox wiki page</strong></a>
+
+        <!-- I can also link another html documents that is in the same folder as this one -->
+        <p><a href="toxicty.html"> link to toxicity</a></p>
+
+        <p>
+            <b>Ecotoxicity</b>,the subject of study of the field of ecotoxicology (a portmanteau of ecology and
+            toxicology),
+            refers to the potential for biological, chemical or physical stressors to affect ecosystems. Such stressors
+            might
+            occur in the natural environment at densities, concentrations or levels high enough to disrupt the natural
+            biochemistry,
+            physiology, behavior and interactions of the living organisms that comprise the ecosystem.
+        </p>
+
+        <p>
+            Ecotoxicology has been defined as, "the branch of toxicology concerned
+            with the study of <a href="https://en.wikipedia.org/wiki/Toxicity">toxic</a> effects, caused by natural or
+            synthetic pollutants,
+            to the constituents of ecosystems.
+        </p>
+
+        <h2>Everyday hazards</h2>
+        <p>
+            In Canada, there is no law requiring manufactures to state the health and environmental hazards associated
+            with their
+            cleaning products. Many people buy such products to support a clean and healthy home, often unaware of the
+            products ability
+            to harm both their
+        </p>
+
+        <h3>Fragrance chemicals</h3>
+        <p>
+            Fragrance chemicals are found in most cleaning products, perfumes, and personal care products.
+            More than 3000 chemicals are used in these fragrance mixtures. The synthetic musks used in detergents:
+
+            <!--unorder list-->
+        <ul>
+            <li>PCBs</li>
+            <li>Pesticides </li>
+            <li> Dioxins </li>
+        </ul>
+        <strong> The most important are:</strong>
+
+        <!-- Ordered list, nested -->
+        <ol>
+            <li>Biocides
+                <ul>
+                    <li>DCOIT</li>
+                    <li>TBT</li>
+                    <li>Diuron</li>
+                </ul>
+            </li>
+            <li>Pharmaceuticala</li>
+            <li>HPAs
+            </li>
+        </ol>
+        </p>
+
+        <h2>Plasticizers</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Accusantium quasi praesentium obcaecati deserunt! Qui
+
+        <h2>Ecotoxicity image</h2>
+
+        <!-- element embeds an image into the document. in the src attribute you can adda url from a img or a image in the same folther as this doc
+        The alt attribute holds a text description of the image, which isn't mandatory but is incredibly useful for accessibility -->
+        <img src="ecotox_img.jpg" alt="Ecotoxicology filds of knowledge">
+        <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Microplastic_toxicity_assay_in_Daphnia_magna_-_1-s2.0-S0269749120360802-gr2_lrg.jpg/800px-Microplastic_toxicity_assay_in_Daphnia_magna_-_1-s2.0-S0269749120360802-gr2_lrg.jpg"
+                alt="Exemple of an Ecotoxicology test">
+        </p>
+        <!-- CSS will make the image bealtiful and etc
+        if your image came from another folter you need to indicate the folder: "folder/name_of_img.jpg" -->
+        <img src="imgs/plastic_bottle.jpg" alt="plastic bottle in the ocean">
+
+        <!-- Inline elements is in alongside other elemetns, such as the anchor <a></a>; Block level elemetns
+        take up a whole "block" of space, such as the <p></p> -->
+
+        <!-- DIV - is the generic container (BLOCK LEVEL) for flow content. It has no effect on the content or layout until styled in some way using 
+        CSS (e.g. styling is directly applied to it, or some kind of layout model like Flexbox is applied to its parent element).
+        Basically it's just a way to group content together to threat it mimilarly or to do 
+        something with it. For instance, to insert a border around an image and the legend at the same time,
+        both must be inside a container (DIV in the case).I gona add the two links  inside a div container: -->
+
+        <div>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div info</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span">span info</a>
+        </div>
+
+        <!-- <span> element is a generic inline container for phrasing content, which does not inherently represent anything.
+        It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang.
+        Basically, we would wrap this aorund any sort of text or content that we wanto to single out later on the style
+        with CSS or to do something with. It's just a generic element -->
+
+        <p>
+            Exemple how <span> span </span> is used
+        </p>
+
+        <!-- <hr> element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section. -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda vero exercitationem, illo qui
+            tempore suscipit? Eos nemo obcaecati inventore minima! Doloribus cupiditate, dolore repellendus vitae
+            repellat eaque illum provident!
+        </p>
+
+        <hr>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto aliquam laborum, deserunt
+            pariatur eaque sunt minima? Ipsa esse excepturi commodi in exercitationem illo, fugiat cum ea debitis.
+            Pariatur, dolorum.
+        </p>
+
+        <!-- <br> element produces a line break in text (carriage-return).
+         It is useful for writing a poem or an address, where the division of lines is significant. -->
+
+        <hr>
+        <section>
+            <p>
+                Lorem ipsum dolor sit, <br>
+                amet consectetur adipisicing elit. <br>
+                At cumque, labore magni deleniti deserunt doloribus enim aut neque dolorum quas, <br>
+                in optio aliquid fuga cum assumenda sapiente pariatur, <br>
+                hic molestiae!
+            </p>
+        </section>
+        <!-- For subscript <sub></sub> and superscript <sup></sup> -->
+        <p>
+            subscritpt and superscript text = LC<sub>50</sub> = 345ng . g<sup>-1</sup> <br>
+            <!-- I can mix this elements with others -->
+            lethal dose &dagger; or concentration = <a href="https://en.wikipedia.org/wiki/Lethal_dose">
+                LC<sub>50</sub></a>= 500 ng.g<sup>-1</sup>
+        </p>
+
+        <!-- HTML ENTITY CODES = Starts with an ampersand & and end with a semicolon; and between we add some string of characters  
+        Are special codes or special sequences that we can use inside 
+        of our htm, that will result in diferent characters, suach as RESERVED charachter or tricky to type, like a cppyright symbol, 
+        or  maybe a diamond or a cross -->
+
+        <p>121 &#62; 57 = 121 is greater than 57 </p>
+
+        <!--SEMANTIC  ELEMENTS:
+        Instead of DIVs we can use more dpecific elements like
+        <section> a generic, standalone section of an application of a website </section>
+        <article> a self contained composition, anything that should be indendently distributable or reusable</article>
+        <nav> represent anything that provides navigation links </nav>
+        <main> Dominant contenc od the <body> of a document, the mais content of the page, and exucle reapeated in multiple pages, e.g. header, foot</main>
+        <header></header>
+        <footer></footer>
+        <aside>often presented as sidebars, callout boxe</aside>
+        <summary></summary>
+        <details></details>
+        <figure></figure>
+         -->
+        <nav>
+            <h2>Navigation:</h2>
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">page1</a></li>
+                <li><a href="">page2</a></li>
+            </ul>
+        </nav>
+        <h2>tables</h2>
+        <p>Tables are structured set of data, made up of rows and comlumns. They can be a great eau of displaying data clearly</p>
+
+        
+    </main>
+</body>
+
+</html>

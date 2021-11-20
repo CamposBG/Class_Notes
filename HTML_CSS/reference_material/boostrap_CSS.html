@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap style from https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- my own style cames after boostrap -->
+    <link rel="stylesheet" href="style_css/Boostrap.css">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <!-- 
+    Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
+
+    Bootstrap comes with three different containers:
+
+        .container, which sets a max-width at each responsive breakpoint
+        .container-fluid, which is width: 100% at all breakpoints
+        .container-{breakpoint}, which is width: 100% until the specified breakpoint
+
+     -->
+    <div class="container">
+
+
+        <h1 class="display-1 text-center">Bootstrap Playground</h1>
+
+
+        <p class="h2">Buttons</p>
+
+
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+        <p class="h3">Button-Group</p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">One</button>
+            <button type="button" class="btn btn-primary">Two</button>
+            <button type="button" class="btn btn-primary">Three</button>
+        </div>
+        <h2 class="display-4">Typography</h2>
+
+
+        <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptate corporis reiciendis, fugit,
+            explicabo soluta, totam ipsa aspernatur animi expedita asperiores! Accusantium vero natus blanditiis, fugiat
+            aperiam dolores rerum labore Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptate
+            corporis reiciendis, fugit,
+            explicabo soluta, totam ipsa aspernatur animi expedita asperiores! Accusantium vero natus blanditiis, fugiat
+            aperiam dolores rerum labore.
+        </p>
+        <!-- text end to aligment -->
+        <div class="text-end bg-secondary text-white">
+            <blockquote class="blockquote">
+                <!-- class=mb0 giver a border margin of 1-->
+                <p  class="mb-1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio assumenda saepe commodi, quia quaerat
+                    ipsum officiis et, tenetur culpa ex minima magni? Ab deleniti labore laboriosam fuga? Quos, atque
+                    tempora.
+                    Optio repellendus libero ea, totam reiciendis laboriosam? Quod doloremque fuga repellat neque ratione at
+                    culpa eum, dolores, dolorem rerum temporibus ipsum in veritatis veniam error beatae necessitatibus
+                    libero? Est, ut.
+                
+                </p>
+                <footer class="blockquote-footer mb-1">Dr.Loren</footer>
+                <p class="blockquote-footer text-light">Dr.James</p>
+            </blockquote>
+        </div>
+
+
+    <p class= "display-6 text-primary"> In the utilities there is things to add in the elements, as changing the color for instance.</p>
+    <!-- Badge -->
+    <button type="button" class="btn btn-primary">Secondary <span class="badge bg-secondary">New</span></span></button>
+
+    <!-- Alerts -->
+    <h3>alerts</h3>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">Well Done!</h4>
+        Message sent!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+</div>
+
+    <!-- the lest part before closing the body comes the js cripts (mandatory for some bootstrap features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

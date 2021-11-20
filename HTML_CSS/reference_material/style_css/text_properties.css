@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+    /* font-weight: bold, italic 10, 100 etc; */
+    font-weight: normal;
+    /* The text-decoration shorthand CSS property sets the appearance of decorative lines on text.
+    It is a shorthand for text-decoration-line, text-decoration-color, 
+    text-decoration-style, and the newer text-decoration-thickness property. */
+    text-decoration:#5c77c0 wavy underline;
+    /* The font-size CSS property sets the size of the font. Changing the font size 
+    also updates the sizes of the font size-relative <length> units, such as em, ex, and so forth. px unity is not recomended for responsive sites */
+    font-size: 150px;
+   
+    /* The font-family CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
+    We need to rely on browser fonts or webite safe fonts(we can assume most browsers have in their system , outwise provide the font we are gonna use.  */
+    font-family: Geneva, Impact, Arial;
+}
+/* We can use the text-decoration ro remove underlines from links.--> Font-family:firstChoise, secondChoise e.g: */
+a{
+    text-decoration: none;
+}
+
+p{
+    /* The line-height CSS property sets the height of a line box. 
+    It's commonly used to set the distance between lines of text.
+    On block-level elements, it specifies the minimum height of 
+    line boxes within the element. On non-replaced inline elements,
+    it specifies the height that is used to calculate line box height. */
+    line-height: 2;
+
+ 
+}
+h2{
+    font-weight: bold;
+       /* The letter-spacing CSS property sets the horizontal spacing behavior 
+    between text characters. This value is added to the natural spacing between
+    characters while rendering the text. Positive values of letter-spacing causes
+    characters to spread farther apart, while negative values of letter-spacing 
+    bring characters closer together. */
+    letter-spacing: 15px;
+
+
+}
+

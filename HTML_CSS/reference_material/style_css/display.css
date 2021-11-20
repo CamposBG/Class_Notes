@@ -1,0 +1,125 @@
+/* DISPLAY property = The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex. 
+using the gisplay I can change de inline and block behavior ex:*/
+
+h1 {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    display: inline;
+}
+
+
+/* changing box properties in linline:
+ - width and hight is ignored in inline elements */
+span {
+
+    border: 3px solid rgb(255, 0, 0);
+    width: 500px;
+    height: 500px;
+    /* note that the margin:  and padding:  occurs just inline (horizontally); */
+    padding: 50px;
+    margin: 100px;
+}
+
+/* Block elements respect the width, hight, argin and pedding */
+h2 {
+    background-color:  paleturquoise;
+    border: 1px solid black;
+    width: 300px;
+    padding:50px;
+    margin: 100px;
+}
+/* INLINE-BLOCK value: bahaved like an inline element except Width, Height, Margin, Pedding*/
+.inlineBlock_porp {
+    display: inline-block;
+    border: 3px solid rgb(12, 135, 192);
+    width: 100px;
+    height: 150px;
+    padding:10px;
+    margin: 30px;
+
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: peru;
+    border: 5px rgb(216, 96, 10) solid;
+    margin: 10px;
+    display: inline-block;
+}
+/* display = none (hide the element) */
+/* ----------------------------------------------
+CSS- UNITS
+- Absolute:
+    pixel (px)
+- relative:
+    % 
+        width: x% percentage of the parent element  
+        line-height:X% percentagem pf the size of the element itself  
+    EM = With font-size, 1em = the font-size of the parent. 2em's is twice the font-size of the parent, ec
+
+*/
+#one {
+    background-color: coral;
+    width: 100px;
+    height: 100px;
+}
+/* in this case % relative to the parent in the htl */
+#two {
+    background-color: cornflowerblue;
+    width: 50%;
+    height: 50%;
+}
+
+article {
+    font-size: 20px;
+}
+/* 2em=2*font size of parent(20px) */
+h3 {
+    font-size: 2em;
+}
+p{
+    font-size: 1em;
+}
+h4{
+    font-size: 1.5em;
+}
+/* with other proprerties, 1e, is equal the computed font size of the element itself 
+exp padding, margin */
+h3{
+    font-size: 2em;
+    /* marging gona be 1em of the font-size no matters que font fize, it will scale up */
+    margin-left: 1em;
+}
+button {
+    font-size: 1em;
+    padding:0 1em ;
+    border-radius: 0.5em;
+    background-color: darkcyan;
+    border: black;
+}
+ul{
+    font-size: 0.7em;
+}
+ /* REM unity =  Relative to the root html element's font-size. oten easier to work :focus-withinif the root font-size is 10px, 1rem is always 20px, 2rem always 40px, etc */
+ html{
+     /* root font size */
+     font-size: 15px;
+ }
+ 
+ 
+ #rem h3 {
+     font-size: 3rem;
+
+ }
+ #rem h4 {
+    font-size: 2rem;
+    
+}
+#rem p {
+    font-size: 1rem;
+    
+}
+#rem ul{
+    font-size: 0.9rem;
+}

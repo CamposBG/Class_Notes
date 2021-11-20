@@ -1,0 +1,70 @@
+/* 
+FLEX SIZING PROPERTIES
+ - Flex-basis
+ 	Defines the inicial size of an element before additional space is distributed
+ - Flex-grow
+ 	Controls the amount of available space an element should take up. Accepts a unit-less number value
+ - Flex-shrink
+ 	If itens are largen than the container, they shrink according to flex-shrink
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 500px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    /* flex-wrap:wrap; */
+}
+
+#container div{ 
+width: 200px;
+height: 200px;
+text-align: center;
+flex-basis: 200x;
+}
+
+/* in this exemple, (1) is gona get twice the available free space conpared to (2) */
+div:nth-of-type(1){
+    flex-grow: 2;
+    flex-shrink: 3;
+}
+div:nth-of-type(5){
+    flex-grow: 1;
+}
+/*  
+JUST FLEX syntax
+ Keyword values
+flex: auto;
+flex: initial;
+flex: none;
+
+ One value, unitless number: flex-grow 
+flex: 2;
+
+ One value, width/height: flex-basis 
+flex: 10em;
+flex: 30%;
+flex: min-content;
+
+ Two values: flex-grow | flex-basis 
+flex: 1 30px;
+
+ Two values: flex-grow | flex-shrink 
+flex: 2 2;
+
+ Three values: flex-grow | flex-shrink | flex-basis 
+flex: 2 2 10%;
+
+ Global values 
+flex: inherit;
+flex: initial;
+flex: unset;  */

@@ -1,0 +1,23 @@
+/* select the emelent I wanto to change de style than { the properties I want to give to the selected element} */
+
+h4{
+    color: blueviolet;
+    background-color: burlywood;
+}
+button{
+    color: coral;
+    background-color: black;
+}
+
+p{
+    color: olive;
+}
+/* COLORS: 
+systems you can reference color: 
+    - RGB red, green, blue Channels, from 0 to 255. ex: rgb(255,0,0) -> pure red; rpg(0,0,0) -> black
+    - hexdecimal, still reg, greem, blue Channels, each ranges from0-255 BUT represend with hexadecimal e.g.: #ffee00
+*/
+h3{
+    color: rgb(170,200,75);
+    background-color: #592ac8;
+}

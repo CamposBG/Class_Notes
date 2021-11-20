@@ -1,0 +1,88 @@
+/* Flax Box:
+What is it?
+    Flexbox is a one dimensional layout method for laying out itens in rows or coluns
+    Flexbox allowus to distribute space dynamically across elements of an unknow size, hence the term "flex"
+Main propperty:
+    display flex
+    flex-direction
+    justify-content
+    flex-wap
+    align-itens
+    align-content
+    align-self
+    
+    */
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+    h1 {
+        text-align: center;
+    }
+    #container {
+        background-color: #003049;
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        border: 5px solid #003049;
+        /* we turn on the flexbox properties on this element (container).
+        there are 2 axis in a box, the main axis(by default, goes from left to right) and the cross axis (by default goes from top to botton)
+        in order to change this axys properties we use "flex direction", so we can decide the main axis direction in ous container (in the case), the 
+        default rirection is row.  */
+        display: flex;
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+        flax-direction: row; 
+   
+        
+        /* justify-content property dictates how the content is distibuted across the main axis
+        the default is "flax-start" if the main axis comes from left to right the stats is on the same left.
+        it can be "flex-start", "flex-end" or "space-around" , "space-between (distribute the left space between the elements but not in the edges)"
+        "space-evenly (just ensure that the space is even between the elements and the container)" */
+        
+        /* justify-content: space-around; */
+        /* justify-content: space-between; */
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+        /* justify-content: space-evenly; */
+        justify-content: center;
+
+    /* Flex-wrap determines whether our element are going to rap along the main axes onto a new line if it's horizontal or a new 
+    column if it's a vertical main axis */
+        
+        flex-wrap:wrap;
+
+        /* in the wrap-reverse our cross axis is reversed, as default it goes left to right, now that is reversed goes right to left  */
+        /* flex-wrap: wrap-reverse; */
+        /* flex-wrap: nowrap; */
+
+        /* alaing-itens is going to distribute space or ditribute our itens, along the cross axis
+        "flex-start" will allign in the beggining of the cross axis */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        align-items: flex-start;
+    
+        /* if I use baseline, it will use the baseline of outr text tp align the elements */
+        /* align-items: baseline; */
+
+        /* Align-content (just work when we have wrap or wrap-reverse) is used to control or distribute space along the cross axis, but only when we have multiple rows or columns,
+         depending on if we're ina row or column based layout.
+        e.g. if we were in a colun layout it controls the space betwee the rows */
+        
+        /* align-content:flex-start; */
+        
+
+    }
+
+
+    
+#container div{ 
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 4em;
+}
+div:nth-of-type(3) {
+    align-self: flex-end;
+}

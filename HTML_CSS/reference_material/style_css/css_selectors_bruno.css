@@ -1,0 +1,151 @@
+/* -------------------------------------------------------
+- Universal selector = select everything in the document
+- element selector = select every element of a specific type, e.g.button, h1, p, a,img etc
+- selector list = we can use a coma "," to select multiple elements, e.g h1,h2 will select all h1's and h2's
+*{}
+img{}
+h1,h2{}
+----------------------------------------------------------
+- ID selector = in html we can use "id" attribute for any element in order to provide a 
+  hook for our CSS to single out a single element* REMEMBER a particular id must be used only once, for one lement in the page,
+---------------------------------------------------------
+- CLASS selector = A class can be applied to multiple elements. It's creatinf a class of elements so I can
+  have different groups and style them similarly.
+--------------------------------------------------------
+ - Descendant selector = which we write with a "space" "  "for instance: to select all anchor tag nested in a list I use: it select all <a>'s that are ested inside an <li>
+    the space represent that we are selection all ,a> inside the li, but not the li
+-----------------------------------------------------------
+ - Adjacent selector (combinators) - in the following e.g. we select only paragraphs that are immeditately preceded by an h1::after
+   h1+p {}
+   the "+" is the adjecent combintator, in the same level, not nestd or children
+----------------------------------------------------------
+-Direct child combinator - we use the ">" sign, in the following e.g It will select the li that are direct children of a <div> in this case, 
+ JUST the direct child, one level down.    
+ div > li {}  
+----------------------------------------------------------------------  
+  - Atribute selector = allow us to select elements based upon particular attributes, for instance, working with input elements where we've seen the type attribute
+  drastically varies the actual render input, whether it's a checkbox, rario button, a text input, the password, etc.e.g. to select all input elements where the pype attribure is set to text:
+  input[type="text"]{}
+
+*/
+body {
+      background-color: #f1faee;
+  }
+button {
+      font-size: 30px;
+      background-color: #a8dadc;
+  }
+h1,h2 {
+    color: #1d3557;
+  }
+  /* ID selector */
+#signup{
+      background-color:#1d3557;
+      color: #f1faee;
+  }
+  /* element selector*/
+span{
+      color: #457b9d;
+}
+  /* class selector, in the html I add a class attribute, in this case the class is "tag"*/
+.tag{
+      background-color: red;
+      color: azure;
+      font-size: 16px;
+}
+  /* - Descendant selector: we are gooing to select all links <a> inside the class posts */
+.posts a {
+      color:#457b9d ;
+}
+  /* - Descendant selector : now lets select every link <a> inside the footer section*/
+footer a {
+      color: brown;
+}
+  /* - Adjacent selector: lets make the one button that comes immediatly after an input is turned pink */
+input + button{
+      background-color: pink;
+}
+   /* - Adjacent selector: lets change the size of all buttons that came immediatly after h2 */
+h2 + button{
+       font-size: 10px;
+}
+   /* Direct child combinator, lets make the a that is the direct child of the footer blue */
+footer > a{
+       color: blue;
+}
+   /* Atribute selector  */
+input[type="text"] {
+       color: green;
+   }
+section[class="post"]{
+       background-color: blue;
+   }
+
+/* ---------------------------------------------------------------
+  PSEUDO CLASSES = keywords added to selector that specifies a special state of the selected elements(s):
+   :active
+   :checked
+   :first
+   :first-child
+   :hover
+   :not()
+   :nth-child()
+   :nth-of-type()
+   etc
+--------------------------------------------------------------------
+  * hover = The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, 
+    but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
+    for instance, when we hover over one button, the color will chage:
+
+ button:hover {
+        background-color: red;
+    } 
+now just the buttons inside a post:  */
+.posts button:hover {
+    background-color: sandybrown;
+}
+
+/* active = Matches when an item is being activated by the user, for example clicked on.
+ lets make the buuton black wile cliking*/
+.posts button:active {
+    background-color: rgb(0, 0, 0);
+}
+
+/* nth-of-type() CSS pseudo-class matches elements of a given type (tag name), based on their position among a group of siblings. 
+e.g. every 3rd post(class) has a diferent color, the 3 just make the 3rd but if i put 3n it will giveme every 3rd*/
+.posts:nth-of-type(3n){
+    background-color: #dfe8dc;
+}
+
+/* --------------------------------------------------------------- 
+PSEUDO-ELEMENTS: Keyword elements added to selector that lets you style a particular part od selected elementd(s)
+::after
+::before
+::first-letter
+::selection
+etc  */
+h2::first-letter {
+    font-size:50px;
+}
+/* selection change the style of selected text */
+p::selection{
+    background-color: springgreen;
+}
+/* PSUDO ELEMENT vs CLASS= CLASS you select a states , while element a particular piece */
+
+/*----------------------------------------------------------- 
+CSS CASCADE = The order we declared in and linked matters:
+h1 {
+    color: purple;
+}
+h1{
+    color:red;
+}
+RED wins!!! because it overwrite the purple
+--------------------------------------------------------------
+SPECIFICITY =  when conflicting styles targer the same elements  the browser use rules to resolve this conflict, cosome selectors  has priority
+more broad selectors loose the fight against more specific selector, ex. a element selector loses the fihght agaisnt a class selector or a id selector,
+the GENERAL formula is: ID>CLASS>ELEMENT
+
+
+*/
