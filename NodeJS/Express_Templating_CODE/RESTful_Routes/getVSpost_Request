@@ -1,0 +1,32 @@
+Get: Are for retrieving information, retrieving a page, viewing things. Basically should be no side effects on the backend. There shouldn't be anything being created or deleted or updated 
+    - Used to retrieve information
+    - Data is sent via query string 
+    - information is plainly visible in the URL
+    - Limited amount of data can be sent
+Post: It is used to create things where you can send a bunch of data. e.g signing up, register your account, a comment to be added to a blog, etc.
+    - Used to post data to the server 
+    - Used to write/create/update
+    - Data is sent via request body, not query string
+    - Can sent any sort of data (JSON)
+
+
+REST: A set of guidelines for how a client + server should communicate and perform CRUD operations on a given resource.
+    A RESTful system complies with these rules.
+    We are going to create APIs and routes that will consider RESTful
+    - CRUD : create, read, update, delete 
+    - Allow users to perform CRUD on that resource (an entity in your database)--> REST 
+    - A set of rules for client-server communication    
+        - Consistence = consistent URL pattern matched with different http verbs
+            - Combining some base URL with different methods to expose full CRUD operations over HTTP 
+
+    -EX. Lets create a exmple
+        pattern will be:
+            /resources (this is going to be our base, then we're going to have different HTTP verbs)
+                (name:Index)     GET/comments - list all comments
+                (name: Create)   POST/comments - Create a new comment
+                (name: Show)     GET/comments/:id - Get one comment (using ID)
+                (name: Update)   PATCH/comments/:id - update one comment
+                (name:Destroy)   DELETE/comments/:id - Destroy one comment
+
+PATCH: partially modify something
+PUT: Is going to completely update an entire thing

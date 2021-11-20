@@ -1,0 +1,49 @@
+1) in the project directory:
+    npm init -y
+
+2) Install the packages 
+    nmp i express ejs mongoose
+
+3)create the index file
+    touch index.js
+
+4) Make a views directory 
+    mkdir views
+
+5) at the index.js file require and initiate the packages
+    const express = require("express");
+    const app = express();
+    const path = require("path");
+
+    app.set("views", path.join(__dirname, "views"));
+    app.set("view engine", "ejs");
+
+6) Add a basic route 
+
+7) import mongoose and connect it
+
+8) Make sure to have the mongo running in the background
+    at the linux terminal:
+        sudo systemctl start mongod
+
+9) Make a separate directory for models (for organization)
+    Remember to export your models to the index file
+
+10) Creates a seeds file to seed our database, to give it some initial data
+
+run the seed file and check at mongo if the itens were added
+    > show dbs
+    admin          0.000GB
+    animalShelter  0.000GB
+    config         0.000GB
+    farmStand      0.000GB
+    local          0.000GB
+    movieApp       0.000GB
+    shopApp        0.000GB
+    test           0.000GB
+    > use farmStand
+    switched to db farmStand
+    > show collections 
+    products
+    > db.products.find()
+    { "_id" : ObjectId("60db7f2b5d9c333284abe7f9"), "name" : "Ruby Grapefruit", "price" : 1.99, "category" : "fruit", "__v" : 0 }
